@@ -1,9 +1,9 @@
 # LifeCyclePractice
 
 
-Application that uses LifecyleObserver functions
+Kotlin Android Application that uses LifecyleObserver functions:
 
-class MyLifeCycleObserver : LifecycleObserver {
+Create a class that extends LifecycleObserver then include these functions.
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreateEvent() {
@@ -29,4 +29,16 @@ class MyLifeCycleObserver : LifecycleObserver {
     fun onStopEvent() {
         Log.i("MyLifeCyclePractice", "onStop")
     }
-}
+
+
+Add the following to the lifecycle functions
+
+```
+
+override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        lifecycle.addObserver(MyLifeCycleObserver())
+    }
+
