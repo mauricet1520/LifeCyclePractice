@@ -31,7 +31,7 @@ Create a class that extends LifecycleObserver then include these functions.
     }
 
 
-Add the following to the lifecycle functions
+Add the following to the lifecycle functions in an activity that extends AppcompatActivity
 
 ```
 
